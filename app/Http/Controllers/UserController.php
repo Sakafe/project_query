@@ -18,7 +18,9 @@ class UserController extends Controller
         // $users = DB::table('teachers')->find(3);
         // return $users;
 
-        $users = DB::table('teachers')->get();
+        $users = DB::table('teachers')
+                //    ->get();
+                ->simplePaginate(3);
         return view('allUsers',['data'=>$users]);
     }
     public function singleUser(string $id){

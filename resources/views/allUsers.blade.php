@@ -39,6 +39,9 @@
                 </tr>
                 @endforeach
             </table>
+            <div class="mt-5">
+                {{$data->links()}}
+            </div>
            </div>
         </div>
     </div>
